@@ -54,7 +54,7 @@ function App() {
               GitHub
             </a>
             <a
-              href="https://twitter.com/heygauravshukla"
+              href="https://x.com/ChampionPincode"
               target="_blank"
               rel="noopener noreferrer"
             >
