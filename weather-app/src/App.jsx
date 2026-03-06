@@ -1,5 +1,5 @@
 import { useState } from "react";
-import searchIcon from "./assets/searchicon.png";
+import searchIcon from "./assets/searchiconbg.png";
 
 function App() {
   const [cityInput, setCityInput] = useState("");
@@ -45,7 +45,7 @@ function App() {
     <>
       <header>
         <nav>
-          <a href="/" className="logo">weather.</a>
+          <a href="/" className="logo">Champion's WeatherApp</a>
           <div className="menu">
             <a
               href="https://github.com/kwaoprincebatsatetteh-beep/weather-app"
@@ -161,6 +161,7 @@ function App() {
           </article>
         </section>
       </main>
+      
     </>
   );
 }
