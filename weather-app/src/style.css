@@ -47,10 +47,18 @@
 body {
   min-height: 100vh;
   color: var(--clr-text-1);
-  background: linear-gradient(var(--clr-surface-3), var(--clr-surface-4));
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+
   font-family: var(--ff-sans);
   line-height: 1.5;
 }
+
 
 main {
   max-width: 40rem;
@@ -85,7 +93,7 @@ nav {
 
 .logo {
   text-decoration: none;
-  color: var(--clr-text-1);
+  color: black;
   font-size: 1.5rem;
   font-weight: var(--fw-medium);
 }
@@ -97,8 +105,9 @@ nav {
 
 .menu a {
   text-decoration: none;
-  color: var(--clr-text-2);
+  color: black;
   font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .menu a:hover {
@@ -115,6 +124,8 @@ nav {
 .hero h1 {
   font-size: 2rem;
   font-weight: var(--fw-medium);
+  color: var(--clr-text-1);
+  text-shadow: 2px 2px 8px rgba(255,255,255,0.7);
 }
 
 /* ================= FORM ================= */
