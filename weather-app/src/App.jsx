@@ -1,4 +1,5 @@
 import { useState } from "react";
+import searchIcon from "./assets/searchicon.png";
 
 function App() {
   const [cityInput, setCityInput] = useState("");
@@ -83,10 +84,10 @@ function App() {
               onChange={(e) => setCityInput(e.target.value)}
             />
 
-            <button type="submit" className="button">
-              <span className="visually-hidden">Search</span>
-              🔍
-            </button>
+           <button type="submit" className="button">
+  <span className="visually-hidden">Search</span>
+  <img src={searchIcon} alt="Search" className="search-icon" />
+</button>
           </form>
 
           <article
