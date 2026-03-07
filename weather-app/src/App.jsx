@@ -59,7 +59,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              X(Twitter)
             </a>
           </div>
         </nav>
