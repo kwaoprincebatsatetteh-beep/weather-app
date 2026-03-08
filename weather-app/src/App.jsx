@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import searchIcon from "./assets/searchiconbg.png";
 
 function App() {
@@ -8,6 +8,26 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const apiKey = import.meta.env.VITE_API_KEY;
+
+  useEffect(() => {
+  if (!navigator.geolocation) return;
+
+  navigator.geolocation.getCurrentPosition(async (position) => {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    try {
+      const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+      );
+
+      const data = await response.json();
+      setWeatherData(data);
+    } catch (error) {
+      console.log("Location weather error:", error);
+    }
+  });
+}, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -162,8 +182,10 @@ function App() {
         </section>
       </main>
       
+ 
     </>
   );
 }
+
 
 export default App;
